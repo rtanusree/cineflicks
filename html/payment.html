@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select payment</title>
+    <link rel="stylesheet" href="../css/payment.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <div class="main">
+        <div class="main-content">
+          <div class="background">
+          <!-- <div class="background-blur"> -->
+            <div class="payment-method">
+                <div class="debit-creditcard">
+                 <div class="heading">
+                    <div class="head">
+                    <i class="fa-regular fa-credit-card"></i>
+                    <h1>Debit/credit card</h1>
+                    </div>
+                    <i class="ri-mastercard-fill" id="i1"></i>
+   
+                  </div>
+                  <div class="forms1">
+                    <form class="form">
+                        <div class="forms">
+                            <div class="form12">
+                                <div class="label">
+                                <label for="card">Card Number</label>
+                                </div>
+                                <!-- <input  type="tel" class="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="123-222-333" required/> -->
+                                <input class="cardnumber" type="tel" id="card" maxlength="19" placeholder="XXXX-XXXX-XXXX-XXXX" required oninput="formatPhoneNumber(this)"/>
+                                <p class="p1">hello</p>
+                        </div>
+                        </div>
+                        <div class="forms">
+                            <div class="form1">
+                                <div class="label">
+                                <label>CVV/CVC No</label>
+                                </div>
+                                <input  type=""class="cvv" maxlength="3" placeholder="Enter CVV/CVC No" required/>
+                                <p class="p2">hello</p>
+                            </div>
+                            <div class="form1">
+                                <div class="label">
+                                <label>Expire</label>
+                                </div>
+                                <input id="e-date" type="tel"  maxlength="5" class="expire" placeholder="MM/YY" required/>
+                                <p class="p3">hello</p>
+                            </div>
+                        </div>
+                        <div class="forms">
+                            <div class="form12">
+                                <div class="label">
+                                <label>Card Holder</label>
+                                </div>
+                                <input  type="text" class="fullname" placeholder="Enter Card Holder" required/>
+                                <p class="p4">hello</p>
+                            </div>
+                        </div>
+                        <div class="forms">
+                        <div class="button">
+                            <input type="submit" class="submit" value="Pay Now">
+                        </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+                <div class="debit-creditcard">
+                    <div class="heading">
+                       <div class="head">
+                        <i class="fa-solid fa-building-columns"></i>
+                       <h1>Net Banking</h1>
+                       </div>
+                       <i class="ri-mastercard-fill" id="i1"></i>
+      
+                     </div>
+                    <div class="forms1">
+                        <form class="radio">
+                            <div class="radio1">
+                            <input type="radio" id="apple" name="favoriteFruit" value="apple">
+                             <img src="https://tse3.mm.bing.net/th?id=OIP.wk3UBkzWGSXAQv1i-UJpSwHaJa&pid=Api&P=0&h=180">
+                            <label for="apple">Hdfc Bank</label>
+                            </div>
+                            <div class="radio1">
+                            <input type="radio" id="banana" name="favoriteFruit" value="banana">
+                            <img src="https://tse3.mm.bing.net/th?id=OIP.Adc1lGO6z6nDFoCys3p-SQHaCM&pid=Api&P=0&h=180">
+                            <label for="banana">icici Bank</label>
+                            </div>
+                            <div class="radio1">
+                            <input type="radio" id="cherry" name="favoriteFruit" value="cherry">
+                            <img src="https://tse1.mm.bing.net/th?id=OIP.L4qm7zOXO7d888ZgqNyJDwHaHa&pid=Api&P=0&h=180">
+                            <label for="cherry">State Bank Of India</label>
+                            </div>
+                            <div class="radio1">
+                            <input type="radio" id="date" name="favoriteFruit" value="date">
+                             <img src="https://tse4.mm.bing.net/th?id=OIP.y1XmJNHlaqg_HQGMons6wwHaF2&pid=Api&P=0&h=180">
+                            <label for="date">Axis Bank</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="forms2">
+                        <select>
+                            <option hidden>Select Your Bank</option>
+                            <option>Union Bank Of India</option>
+                            <option>Punjab National Bank</option>
+                            <option>Kotak Mahinada</option>
+                            <option>Bandhan Bank</option>
+                            <option>CSB Bank</option>
+                            <option>Karnataka Bank</option>
+                        </select>
+                    </div>
+                    <div class="forms2">
+                      <button class="pay1">Pay Now</button>
+                    </div>
+    
+                   
+                </div>
+                <div class="debit-creditcard">
+                    <div class="heading">
+                       <div class="head">
+                        <i class="fa-solid fa-money-bill"></i>
+                       <h1>UPI</h1>
+                       </div>
+                       <i class="ri-mastercard-fill" id="i1"></i>
+      
+                     </div>
+                    <div class="forms1">
+                        <form class="radio">
+                            <div class="radio1">
+                            <input type="radio" id="apple" name="favoriteFruit" value="apple">
+                             <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202105/Google-Pay-hero_1.jpg">
+                            <label for="apple">Google Pay</label>
+                            </div>
+                            <div class="radio1">
+                            <input type="radio" id="banana" name="favoriteFruit" value="banana">
+                            <img src="https://d3pc1xvrcw35tl.cloudfront.net/images/1200x900/payment-app-phone-pay-has-launched-an-aggregator-service-know-here-everything_2023061030257.jpg">
+                            <label for="banana">Phone Pay</label>
+                            </div>
+                            <div class="radio1">
+                            <input type="radio" id="cherry" name="favoriteFruit" value="cherry">
+                            <img src="https://static.vecteezy.com/system/resources/previews/022/100/711/non_2x/paytm-logo-transparent-free-png.png">
+                            <label for="cherry">Paytym</label>
+                            </div>
+                            <div class="radio1">
+                            <input type="radio" id="date" name="favoriteFruit" value="date">
+                             <img src="https://tse4.mm.bing.net/th?id=OIP.TBvJQM0YORRyOAY6RwAQkwHaHa&pid=Api&P=0&h=180">
+                            <label for="date">Pay Pal</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="forms2">
+                       <input type="text" placeholder="Enter Upi Id"/>
+                    </div>
+                    <div class="forms2">
+                      <button class="pay2">Pay Now</button>
+                    </div>
+    
+                   
+                </div>
+             </div>
+        </div>
+        </div>
+    </div>
+        
+
+<script src="../javascript/payment.js"></script>
+    
+</body>
+</html>
